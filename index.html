@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Summer Sale</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <html data-theme="light"></html>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/1ab56f09f6.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      button:hover {
+        background: rgb(133, 7, 100);
+        color: beige;
+      }
+      #K-accessories-1,
+      #K-accessories-2,
+      #Home-cooker,
+      #Sports-back-cap,
+      #Full-jersey-set,
+      #Sports-cates,
+      #Single-relax-chair,
+      #Children-play,
+      #Flexible-sofa {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-100">
+    <header
+      class="bg-yellow-50 grid grid-cols-1 lg:grid-cols-2 mx-auto my-auto"
+    >
+      <div class="mx-auto text-black my-auto mt-8 lg:mt-auto">
+        <h4 class="text-center mb-4">---SALE FEVER---</h4>
+        <h1 class="text-3xl font-bold mb-8">
+          Purchase TK 200 or <br />
+          above & get <span class="text-pink-500">20% off</span>
+        </h1>
+        <h5 class="text-center">
+          Use Promo Code
+          <button
+            onclick="getCouponButton()"
+            id=""
+            class="sm:mb-16 ml-2 bg-pink-500 rounded text-white font-semibold w-20 h-8"
+          >
+            <p id="Coupon-button">SELL200</p>
+          </button>
+        </h5>
+      </div>
+      <div>
+        <img
+          class="h-96 w-96 sm:mx-auto mb-8"
+          src="images/Summer 1.png"
+          alt=""
+        />
+      </div>
+    </header>
+    <main>
+      <section class="flex lg:flex-row sm:flex-col mt-8">
+        <div class="grid-cols-3 mx-auto">
+          <div class="flex">
+            <div>
+              <h1 class="text-3xl font-bold my-6 sm:text-center">
+                Kitchenware
+              </h1>
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-6"
+              >
+                <div
+                  onclick="getKAC1Price()"
+                  id="K-accessories-1"
+                  class="card card-compact w-80 bg-base-100 shadow-xl"
+                >
+                  <figure class="bg-slate-200 m-4">
+                    <img class="pb-3" src="images/prod1.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <p class="mx-auto text-yellow-400">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </p>
+                    <h2
+                      id="K-accessories-1-name"
+                      class="text-2xl font-semibold text-center"
+                    >
+                      K.Accessories
+                    </h2>
+                    <p class="text-blue-800 font-medium text-center text-lg">
+                      <span id="K-accessories-1-amount">39</span>.00Tk
+                    </p>
+                    <div class="card-actions justify-end"></div>
+                  </div>
+                </div>
+                <div
+                  onclick="getKAC2Price()"
+                  id="K-accessories-2"
+                  class="card card-compact w-80 bg-base-100 shadow-xl"
+                >
+                  <figure class="bg-slate-200 m-4">
+                    <img class="pb-3" src="images/prod2.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <p class="mx-auto text-yellow-400">
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </p>
+                    <h2
+                      id="K-accessories-2-name"
+                      class="text-2xl font-semibold text-center"
+                    >
+                      K.Accessories
+                    </h2>
+                    <p class="text-blue-800 font-medium text-center text-lg">
+                      <span id="K-accessories-2-amount">25</span>.00Tk
+                    </p>
+                    <div class="card-actions justify-end"></div>
+                  </div>
+                </div>
+                <div
+                  onclick="getHomeCookerPrice()"
+                  id="Home-cooker"
+                  class="card card-compact w-80 bg-base-100 shadow-xl"
+                >
+                  <figure class="bg-slate-200 m-4">
+                    <img class="pb-3" src="images/prod3.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <p class="mx-auto text-yellow-400">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </p>
+                    <h2
+                      id="Home-cooker-name"
+                      class="text-2xl font-semibold text-center"
+                    >
+                      Home Cooker
+                    </h2>
+                    <p class="text-blue-800 font-medium text-center text-lg">
+                      <span id="Home-cooker-amount">49</span>.00Tk
+                    </p>
+                    <div class="card-actions justify-end"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex mt-6">
+            <div>
+              <h1 class="text-3xl font-bold my-6 sm:text-center sm:mt-8">
+                Sportswear
+              </h1>
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-6"
+              >
+                <div
+                  onclick="getSportsBackCapPrice()"
+                  id="Sports-back-cap"
+                  class="card card-compact w-80 bg-base-100 shadow-xl"
+                >
+                  <figure class="bg-slate-200 m-4">
+                    <img class="pb-3" src="images/prod4.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <p class="mx-auto text-yellow-400">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </p>
+                    <h2
+                      id="Sports-back-cap-name"
+                      class="text-2xl font-semibold text-center"
+                    >
+                      Sports Back Cap
+                    </h2>
+                    <p class="text-blue-800 font-medium text-center text-lg">
+                      <span id="Sports-back-cap-amount">49</span>.00Tk
+                    </p>
+                    <div class="card-actions justify-end"></div>
+                  </div>
+                </div>
+                <div
+                  onclick="getFullJerseySetPrice()"
+                  id="Full-jersey-set"
+                  class="card card-compact w-80 bg-base-100 shadow-xl"
+                >
+                  <figure class="bg-slate-200 m-4">
+                    <img class="pb-3" src="images/prod5.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <p class="mx-auto text-yellow-400">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </p>
+                    <h2
+                      id="Full-jersey-set-name"
+                      class="text-2xl font-semibold text-center"
+                    >
+                      Full Jersey Set
+                    </h2>
+                    <p class="text-blue-800 font-medium text-center text-lg">
+                      <span id="Full-jersey-set-amount">69</span>.00Tk
+                    </p>
+                    <div class="card-actions justify-end"></div>
+                  </div>
+                </div>
+                <div
+                  onclick="getSportsCatesPrice()"
+                  id="Sports-cates"
+                  class="card card-compact w-80 bg-base-100 shadow-xl"
+                >
+                  <figure class="bg-slate-200 m-4">
+                    <img class="pb-3" src="images/prod6.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <p class="mx-auto text-yellow-400">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </p>
+                    <h2
+                      id="Sports-cates-name"
+                      class="text-2xl font-semibold text-center"
+                    >
+                      Sports cates
+                    </h2>
+                    <p class="text-blue-800 font-medium text-center text-lg">
+                      <span id="Sports-cates-amount">159</span>.00Tk
+                    </p>
+                    <div class="card-actions justify-end"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex mt-6 mb-8">
+            <div>
+              <h1 class="text-3xl font-bold my-6 sm:text-center sm:mt-6">
+                Furniture
+              </h1>
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-6"
+              >
+                <div
+                  onclick="getSingleRelaxChairPrice()"
+                  id="Single-relax-chair"
+                  class="card card-compact w-80 bg-base-100 shadow-xl"
+                >
+                  <figure class="bg-slate-200 m-4">
+                    <img class="pb-3" src="images/prod7.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <p class="mx-auto text-yellow-400">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </p>
+                    <h2
+                      id="Single-relax-chair-name"
+                      class="text-2xl font-semibold text-center"
+                    >
+                      Single Relax Chair
+                    </h2>
+                    <p class="text-blue-800 font-medium text-center text-lg">
+                      <span id="Single-relax-chair-amount">185</span>.00Tk
+                    </p>
+                    <div class="card-actions justify-end"></div>
+                  </div>
+                </div>
+                <div
+                  onclick="getChildrenPlayPrice()"
+                  id="Children-play"
+                  class="card card-compact w-80 bg-base-100 shadow-xl"
+                >
+                  <figure class="bg-slate-200 m-4">
+                    <img class="pb-3" src="images/prod8.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <p class="mx-auto text-yellow-400">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </p>
+                    <h2
+                      id="Children-play-name"
+                      class="text-2xl font-semibold text-center"
+                    >
+                      Children Play
+                    </h2>
+                    <p class="text-blue-800 font-medium text-center text-lg">
+                      <span id="Children-play-amount">299</span>.00Tk
+                    </p>
+                    <div class="card-actions justify-end"></div>
+                  </div>
+                </div>
+                <div
+                  onclick="getFlexibleSofaPrice()"
+                  id="Flexible-sofa"
+                  class="card card-compact w-80 bg-base-100 shadow-xl"
+                >
+                  <figure class="bg-slate-200 m-4">
+                    <img class="pb-3" src="images/prod9.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <p class="mx-auto text-yellow-400">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </p>
+                    <h2
+                      id="Flexible-sofa-name"
+                      class="text-2xl font-semibold text-center"
+                    >
+                      Flexible Sofa
+                    </h2>
+                    <p class="text-blue-800 font-medium text-center text-lg">
+                      <span id="Flexible-sofa-amount">349</span>.00Tk
+                    </p>
+                    <div class="card-actions justify-end"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Purchase Section -->
+        <div class="grid-cols-1 mr-16 mt-8 sm:mx-auto sm:mt-16 sm:mb-16">
+          <div class="flex sm:flex-col">
+            <div class="mb-3">
+              <h1 class="text-3xl mb-4">Have Coupon?</h1>
+              <input
+                class=""
+                type="text"
+                name=""
+                id="Coupon-code"
+                placeholder="Coupon Code"
+              /><button
+                onclick="getApplyButton()"
+                class="ml-2 bg-pink-500 rounded text-white font-semibold w-20 h-8"
+              >
+                <p id="Apply-button">Apply</p>
+              </button>
+              <div id="Product-entry"></div>
+            </div>
+          </div>
+
+          <div>
+            <h1 class="text-xl">
+              Total price:
+              <span class="font-semibold"
+                ><span id="Total-price" class="text-green-800">0</span> TK</span
+              >
+            </h1>
+            <h1 class="text-xl">
+              Discount:
+              <span class="font-semibold"
+                ><span id="Discount-price" class="text-red-800">0</span>
+                TK</span
+              >
+            </h1>
+            <h1 class="text-xl">
+              Total:
+              <span class="font-semibold"
+                ><span id="After-coupon" class="text-blue-800">0</span> TK</span
+              >
+            </h1>
+            <button
+              onclick="my_modal_4.showModal()"
+              id="Purchase-button"
+              class="mr-2 mt-6 ml-2 bg-pink-500 rounded text-white font-semibold w-64 h-8"
+            >
+              Make Purchase
+            </button>
+            <dialog id="my_modal_4" class="modal">
+              <div class="modal-box w-96 max-w-5xl">
+                <img class="mx-auto" src="images/congo.png" alt="" />
+                <h3 class="text-center font-bold text-3xl">Congratulations!</h3>
+                <p class="text-center py-4">
+                  You have successfully purchased the products
+                </p>
+                <div class="mx-auto">
+                  <form method="dialog">
+                    <!-- if there is a button, it will close the modal -->
+                    <div class="mx-auto">
+                      <p class="text-center mt-4">
+                        <button class="mx-auto btn btn-primary">Go Home</button>
+                      </p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/utilities.js"></script>
+    <script src="js/coupon.js"></script>
+    <script src="js/discount.js"></script>
+  </body>
+</html>
+
+<!--  -->
